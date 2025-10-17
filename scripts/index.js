@@ -1,0 +1,519 @@
+// --- Data ---
+const categories = [
+  "All",
+  "Professional",
+  "Indie",
+  "Graphics Programming",
+  "Game Development",
+  "Game Engine Development",
+  "Low-Level Development"
+];
+
+const projects = [
+  {
+    title: "Mount & Blade II: Bannerlord (2020 - 2022)",
+    categories: ["Professional", "Game Engine Development", "Graphics Programming"],
+    content:`
+      <div class="images">
+        <img src="images/tw_1.jpg">
+        <img src="images/tw_2.png">
+      </div>
+      <div class="text">
+        <p>
+          A strategy action RPG developed by TaleWorlds Entertainment.
+          As an engine programmer, I helped maintain and optimize the in-house game engine from early access through to full release.
+          I worked closely with design and art teams to support specialized needs and ensure engine stability across large-scale battles and sandbox simulation.
+        </p>
+        <p>
+          A major focus of my work was improving modding tools used by both artists and scene designers.
+          Since the engine supports extensive modding, these tools were also exposed to the community.
+          I was responsible for receiving and implementing feature requests from both internal teams and external modders.
+        </p>
+        <p>
+          Throughout the project, I also supported the game's console ports by addressing platform-specific issues and performance bottlenecks.
+          Profiling and optimization were an ongoing and critical part of my role.
+        </p>
+        <p>
+          Key contributions include:
+        </p>
+        <ul>
+          <li> Improvements on terrain, LOD, LUT, navmesh and scene loading systems </li>
+          <li> Profiling, optimization, bug fixes and memory leak resolution </li>
+          <li> Porting engine modules and systems to PlayStation 4 and Xbox One </li>
+          <li> Volumetric rendering techniques </li>
+          <li> Advanced visualization tools for debugging and level design </li>
+          <li> Tools for technical art workflows and modding support </li>
+        </ul>
+        <p>
+          <a class="link" href="https://store.steampowered.com/app/261550/Mount__Blade_II_Bannerlord/">Click here</a> for the Steam store page.
+        </p>
+      </div>
+    `
+  },
+  {
+    title: "Hot Wheels Open World (2020)",
+    categories: ["Professional", "Game Development"],
+    content:`
+      <div class="images">
+        <img src="images/hw_1.jpg">
+        <img src="images/hw_2.png">
+      </div>
+      <div class="text">
+        <p>
+          Official Hot Wheels Roblox game developed by Mildmania and Gamefam Studios in partnership with Mattel.
+          As a game programmer, I implemented core gameplay mechanics and open-world systems using Lua.
+          I worked with an international team and maintained regular communication with brand representatives to align features with brand vision.
+        </p>
+        <p>
+        Due to the scale and ambition of the project, many of Roblox's built-in tools were either limited, unsuitable or entirely missing for our needs.
+        I was primarily responsible for developing custom tools and systems to tailor the platform to the requirements of a large-scale, professional game.
+        </p>
+        <p>
+          Key contributions include:
+        </p>
+        <ul>
+          <li> Custom water system optimized for large map performance </li>
+          <li> Multiplayer racing features including race invitations and result tracking </li>
+          <li> Task system for daily and progress-based experience rewards </li>
+          <li> Dynamic car packaging and spawning system for collectible system </li>
+          <li> Visual effects framework for gameplay feedback </li>
+          <li> Flexible animation system to support scalable and reusable VFX </li>
+          <li> Server-based anti-cheat mechanisms to ensure fair multiplayer play </li>
+          <li> Performance profiling, memory optimizations and bug fixes </li>
+          <li> Database management for persistent user data and progression </li>
+        </ul>
+        <p>
+          <a class="link" href="https://www.roblox.com/games/5652023420/">Click here</a> for the Roblox store page.
+        </p>
+      </div>
+    `
+  },
+  {
+    title: "kB (2023 - Present)",
+    categories: ["Indie", "Game Development"],
+    content:`
+      <div class="images">
+        <div class="sidebyside">
+          <iframe style="width: 49%;" src="https://www.youtube.com/embed/SSLnP636rwM" allowfullscreen></iframe>
+          <iframe style="width: 49%;" src="https://www.youtube.com/embed/HjgcAGgmA3U" allowfullscreen></iframe>
+        </div>
+        <div class="sidebyside">
+          <img style="height: 300px;" src="images/tapp_1.jpg">
+          <img style="height: 300px;" src="images/tapp_2.jpg">
+          <img style="height: 300px;" src="images/tapp_3.jpg">
+        </div>
+        <img style="height: 300px;" src="images/mhb_1.jpg">
+      </div>
+      <div class="text">
+        <p>
+          As an indie developer, I led and collaborated with small teams to create and publish multiple mobile and PC titles across a variety of genres including arcade, shooter, cooking, survival, puzzle and tycoon.
+          My work spanned the full development cycle with a focus on on low-level systems, technical art, publishing and live operations.
+        </p>
+        <p>
+          Key projects:
+        </p>
+        <ul>
+          <li> WS (Mobile – Puzzle Shooter/Survival) </li>
+          <p>
+            A hybrid casual puzzle-shooter game with zombie survival elements.
+            Soft-launched for metrics testing with promising CPI. Currently in refinement.
+          </p>
+          <p>
+            Developed a dynamic dungeon generation system that adapts to narrative structure.
+            Procedurally placing rooms, enemies, pickups and environmental details based on story data.
+          </p>
+          
+          <li> Tapp! (Mobile – Arcade) </li>
+          <p>
+            A fast-paced, one-tap arcade game with puzzle-like levels and intense challenges.
+            Released on Google Play, with strong retention and low CPI. Currently in development with experiments on monetization strategies.
+          </p>
+          <p>
+            Built systems to support long-term user engagement including level pack system, user data management and cloud-based solutions.
+            Managed post-release updates, A/B testing and live-ops.
+          </p>
+          
+          <li> MHB (Mobile – Cooking) </li>
+          <p>
+            A kid-friendly, stylized cooking game.
+            Currently in the publishing phase.
+          </p>
+          <p>
+            Designed intuitive gameplay to maximize accessibility and engagement.
+            Built a modular Unity framework with dependency injection, event management, pooling, scope-based scripting and many more systems.
+          </p>
+          
+          <li> FSS (PC – Tycoon/Strategy) </li>
+          <p>
+            A football scouting and recruitment simulation.
+            Currently in refinement.
+          </p>
+          <p>
+            Designed scalable gameplay systems and data models to support team simulation, scouting mechanics and modding.
+          </p>
+          
+          <li> V (PC – Maze Adventure) </li>
+          <p>
+            A maze adventure game with spatial puzzles and environmental storytelling.
+            Currently in active development.
+          </p>
+          <p>
+            Built a custom game engine to support the game's special requirements.
+            Validated the engine through multiple game jam entries, refining both performance and tools.
+            You can find more information in Veng section.
+          </p>
+        </ul>
+      </div>
+    `
+  },
+  {
+    title: "Veng (2024 - Present)",
+    categories: ["Game Engine Development", "Graphics Programming", "Game Development"],
+    content:`
+      <div class="images">
+        <img src="images/v_1.png">
+        <img style="height: 300px;" src="images/recurse.jpg">
+        <img src="images/rampage_1.png">
+      </div>
+      <div class="text">
+        <p>
+          A cross-platform C++ game engine originally created to explore spatially non-Euclidean puzzle design.
+          It evolved through multiple game jam titles, each refining the architecture, tools and systems.
+        </p>
+        
+        <div class="project-title">
+          V (PC – Maze Adventure)
+        </div>
+        <p>
+          A maze adventure game currently in active development.
+          Its design relies on spatially impossible environments; recursive corridors, portal-based layouts and shifting geometry.
+        </p>
+        <p>
+          After implementing the core systems, I've decided to participate in game jams to iteratively validate and improve the engine.
+          This workflow has enabled rapid prototyping and made the core engine production-ready.
+        </p>
+        
+        <div class="project-title">
+          recurse (<a class="link" style="text-decoration: underline;" href="https://itch.io/jam/gmtk-2025">GMTK Game Jam 2025</a> – Puzzle / Time Loop)
+        </div>
+        <p>
+          A minimalist dungeon puzzle game where players interact with "echoes" of their past selves across looping timelines.
+          Made in 96 hours.
+        <ul>
+          <li> Implemented a deterministic echo replay system </li>
+          <li> Built a minimal physics and collision system </li>
+          <li> Added audio streaming and control with miniaudio </li>
+          <li> Deployed a browser build using Emscripten </li>
+        </ul>
+        <p>
+          <a class="link" href="https://axavian.itch.io/recurse">Click here</a> for the game page.
+          <a class="link" href="https://github.com/AXaViaN/recurse_gmtk2025">Click here</a> for the GitHub page.
+        </p>
+        
+        <div class="project-title">
+          rampage (<a class="link" style="text-decoration: underline;" href="https://itch.io/jam/brackeys-14">Brackeys Game Jam 2025.2</a> – Top-Down Shooter)
+        </div>
+        <p>
+          A Hotline Miami inspired action game focused on speed, gore and tactical movement.
+          This entry stress-tested the engine's handling of fast-paced gameplay, AI, audio layering and feedback systems.
+        </p>
+        <ul>
+          <li> Implemented a scene management system </li>
+          <li> Extended the entity/component system </li>
+          <li> Enhanced audio and VFX pipelines </li>
+          <li> Reworked the physics system to handle fast-paced interactions </li>
+          <li> Improved performance and core system usage </li>
+        </ul>
+        <p>
+          <a class="link" href="https://axavian.itch.io/rampage">Click here</a> for the game page.
+        </p>
+      </div>
+    `
+  },
+  {
+    title: "axNES (2023 - Present)",
+    categories: ["Low-Level Development", "Graphics Programming"],
+    content:`
+      <div class="images">
+        <img src="images/axnes.jpg">
+      </div>
+      <div class="text">
+        <p>
+          A cycle-accurate NES emulator built from scratch in C++, using OpenGL for video output.
+          Ongoing development is focused on extending ROM mapper support beyond NROM and implementing PRG-RAM save functionality.
+        </p>
+        <p>
+          The emulator includes a comprehensive debugger suite allowing inspection of both the emulator internals and the games it runs.
+          Features include a CPU debugger for step-through intstruction execution and a visual debugger that displays pattern tables, palettes and nametables.
+        </p>
+        <p>
+          The hardware components are implemented in compliance with their technical reference manuals.
+          Additional features (e.g. Ricoh 2A03 modifications to the 6502) are implemented separately.
+          This allows hardware to be potentially reused in other emulators (e.g. Apple II, Atari 8-bit, Commodore 64).
+        </p>
+      </div>
+    `
+  },
+  {
+    title: "kaOS (2023 - Present)",
+    categories: ["Low-Level Development"],
+    content:`
+      <div class="images">
+        <img src="images/kaos.png">
+      </div>
+      <div class="text">
+        <p>
+          A toy operating system built from scratch in x86 assembly.
+          It has a minimal shell with basic command support that can perform BIOS-based I/O operations.
+        </p>
+        <p>
+          It supports booting from USB, physical disk or virtual disk.
+          The bootstrap process begins with the bootloader, performing sanity checks before loading the kernel and launching the shell.
+          Currently, the shell runs in real mode, with the foundation for switching to protected mode already in place and the A20 line is enabled.
+        </p>
+        <p>
+          This project serves as an in-depth exploration of low-level systems programming and hardware interaction.
+          Future plans include transitioning to protected mode and developing a 32-bit kernel.
+        </p>
+      </div>
+    `
+  },
+  {
+    title: "Game Jams (2015 - Present)",
+    categories: ["Game Development"],
+    content:`
+      <div class="images">
+        <img style="width: 75%;" src="images/exodus.png">
+        <img style="width: 75%;" src="images/escape.png">
+        <img style="width: 75%;" src="images/hsrwaeim.jpg">
+        <img style="width: 75%;" src="images/empty_paper.jpg">
+      </div>
+      <div class="text">
+        <p>
+          I frequently join game jams and programming contests.
+          This gives me extensive experience in rapid prototyping, collaborative development and creative problem solving under tight deadlines.
+        </p>
+        <p>
+          I enter these events using both industry-standard engines and custom engines, sometimes developing the engine itself during the event.
+        </p>
+        <p>
+          Here are some of my entries:
+        </p>
+        <ul>
+          <li> <a class="link" href="https://axavian.itch.io/rampage">Click here</a> for the Brackeys Game Jam 2025.2 entry (2025) </li>
+          <li> <a class="link" href="https://axavian.itch.io/recurse">Click here</a> for the GMTK Game Jam 2025 entry (2025) </li>
+          <li> <a class="link" href="https://axavian.itch.io/exodus">Click here</a> for the Ludum Dare 55 entry (2024) </li>
+          <li> <a class="link" href="https://axavian.itch.io/escape">Click here</a> for the Ludum Dare 44 entry (2019) </li>
+          <li> <a class="link" href="https://axavian.itch.io/squirrels-revenge">Click here</a> for the Ludum Dare 42 entry (2018) </li>
+          <li> <a class="link" href="http://globalgamejam.org/2017/games/horribly-slow-rowing-extremely-inefficient-method">Click here</a> for the Global Game Jam 2017 entry (2017) </li>
+          <li> <a class="link" href="https://web.archive.org/web/20201204024552/http://ludumdare.com/compo/ludum-dare-37/?action=preview&uid=117624">Click here</a> for the Ludum Dare 37 entry (2016) </li>
+          <li> <a class="link" href="http://globalgamejam.org/2015/games/bos-kagit-empty-paper">Click here</a> for the Global Game Jam 2015 entry (2015) </li>
+        </ul>
+      </div>
+    `
+  },
+  {
+    title: "Software Rendering",
+    categories: ["Graphics Programming"],
+    content:`
+      <div class="images">
+        <img src="images/rayray_001.jpg">
+        <img src="images/urgax_000.jpg">
+      </div>
+      <div class="text">
+        <div class="project-title">
+          RayRay (2018)
+        </div>
+        <p>
+          A software path tracer developed to explore ray-tracing techniques and their application in rendering realistic images.
+        </p>
+        <ul>
+          <li> Lambertian, metallic and dielectric materials </li>
+          <li> Texturing </li>
+          <li> Motion blur </li>
+          <li> Antialiasing </li>
+        </ul>
+        <p>
+          <a class="link" href="https://github.com/AXaViaN/RayRay">Click here</a> for the GitHub page.
+          <a class="link" href="https://www.shadertoy.com/view/MlGfDW">Click here</a> for a light version of this project on Shadertoy.
+        </p>
+        
+        <div class="project-title">
+          urgAX (2017)
+        </div>
+        <p>
+          A software rasterizer coded from scratch in C++ to learn more about computer graphics.
+          The GPU pipeline is fully simulated from vertex processing to fragment output.
+        </p>
+        <ul>
+          <li> Transformation, culling and rasterization stages </li>
+          <li> Programmable vertex and fragment stages </li>
+        </ul>
+      </div>
+    `
+  },
+  {
+    title: "Konrul (2020)",
+    categories: ["Game Engine Development", "Graphics Programming"],
+    content:`
+      <div class="images">
+        <iframe src="https://www.youtube.com/embed/rJpFe2YftY0" allowfullscreen></iframe>
+      </div>
+      <div class="text">
+        <p>
+          A game engine made for the Global Game Jam 2020 with C++, OpenGL, PhysX, Assimp and ImGui.
+          The project involved building the core runtime library and collaborating with a small team to create a working game prototype within the jam's time constraints.
+        </p>
+        <p>
+          Key features:
+        </p>
+        <ul>
+          <li> Content manager </li>
+          <li> Scene editor </li>
+          <li> Game component scripting </li>
+          <li> Shader hot reloading </li>
+          <li> Environment mapping & Skylight </li>
+          <li> Particle system </li>
+        </ul>
+      </div>
+    `
+  },
+  {
+    title: "Koala (2018)",
+    categories: ["Low-Level Development"],
+    content:`
+      <div class="images">
+        <img src="images/koala_002.jpg">
+      </div>
+      <div class="text">
+        <p>
+          A visual programming language developed as my graduation project.
+          Designed to help beginners, particularly middle school students and hobbyists to learn programming concepts with ease.
+          The language focuses on simplicity and intuitive design, using a visual interface to teach foundational programming principles without the need for traditional syntax.
+        </p>
+        <p>
+          <a class="link" href="https://github.com/AXaViaN/Koala">Click here</a> for the GitHub page.
+        </p>
+      </div>
+    `
+  },
+  {
+    title: "PBR-DE (2017)",
+    categories: ["Graphics Programming"],
+    content:`
+      <div class="images">
+        <img src="images/pbr_demo_6.jpg">
+      </div>
+      <div class="text">
+        <p>
+          A graphics engine built to demonstrate realistic lighting techniques, implemented with C++ and OpenGL.
+          This engine incorporates Physically Based Rendering (PBR) and Image-Based Lighting (IBL), following the UE4 Real Shading Model.
+          The rendering pipeline uses the Cook-Torrance BRDF, Trowbridge-Reitz NDF and Smith-Schlick for accurate surface interaction and lighting.
+        </p>
+        <p>
+          <a class="link" href="https://github.com/AXaViaN/PBR_demo">Click here</a> for the GitHub page.
+        </p>
+      </div>
+    `
+  },
+  {
+    title: "Kaşif Veysel – Yemen Ellerinde (2015)",
+    categories: ["Graphics Programming", "Game Engine Development", "Game Development"],
+    content:`
+      <div class="images">
+        <img src="images/veysel.jpg">
+      </div>
+      <div class="text">
+        <p style="font-style: italic;">
+          You are trapped in an ancient maze.
+          Every step you take closes off the path behind you.
+          You must traverse the entire room to unlock the door.
+        </p>
+        <p>
+          A maze game developed for a university game contest, built using the Borland Graphics Interface - a graphics library from 1987, as a limitation.
+          Despite the limitation, I implemented a ray-cast rendering algorithm to convert 2D mazes into 3D FPS-like environments. I also developed the core gameplay mechanics. The game was awarded first place in the contest.
+        </p>
+        <p>
+          <a class="link" href="https://yadi.sk/d/NsuloiIOfGb3A">Click here</a> for the game (performance may be low on modern systems).
+        </p>
+      </div>
+    `
+  },
+];
+
+// --- DOM refs ---
+const buttonContainer = document.getElementById("category-buttons");
+const projectContainer = document.getElementById("projects");
+let activeCategory = "All";
+
+// --- Render buttons ---
+function renderButtons(){
+  buttonContainer.innerHTML = "";
+  categories.forEach(cat => {
+    const btn = document.createElement("button");
+    btn.className = "chip" + (activeCategory === cat ? " active" : "");
+    btn.textContent = cat;
+    btn.setAttribute('aria-pressed', activeCategory === cat);
+    btn.onclick = () => {
+      if (activeCategory === cat) return; // avoid redundant work
+      activeCategory = cat;
+      renderButtons();
+      renderProjects(true);
+    };
+    buttonContainer.appendChild(btn);
+  });
+}
+
+// --- Utility: create a card element ---
+function createCard(p){
+  const card = document.createElement('article');
+  card.className = 'card';
+  card.innerHTML = `
+    <div class="content">
+      <h1 class="title">${p.title}</h1>
+      <div class="tags">
+        ${p.categories.map(c=>`<span class='tag'>${c}</span>`).join('')}
+      </div>
+      <div class="desc">${p.content}</div>
+    </div>
+  `;
+  return card;
+}
+
+// --- Render projects with enter/exit animations ---
+function renderProjects(withExit){
+  const list = (activeCategory === 'All') ? projects : projects.filter(p=>p.categories.includes(activeCategory));
+
+  if(withExit){
+    // animate existing out
+    const current = Array.from(projectContainer.children);
+    current.forEach((el,i)=>{
+      el.style.transitionDelay = (i*40)+'ms';
+      el.classList.add('card-out');
+    });
+    // after exit, replace content
+    const exitDur = 320 + current.length*40;
+    setTimeout(()=> build(list), Math.min(exitDur, 800));
+  } else {
+    build(list);
+  }
+}
+
+function build(list){
+  projectContainer.innerHTML = '';
+  list.forEach((p,i)=>{
+    const card = createCard(p);
+    card.style.transitionDelay = (i*60)+'ms';
+    projectContainer.appendChild(card);
+    
+    const reflow = card.offsetHeight;
+    card.classList.add('visible');
+    
+    // force reflow then add visible for animation
+    requestAnimationFrame(()=> card.classList.add('visible'));
+  });
+}
+
+// Init
+renderButtons();
+renderProjects(false);

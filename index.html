@@ -295,11 +295,14 @@
     <section class="intro">
       <h1>Ahmet Selim ÇEVİK</h1>
       <p>
-        I wrote my first line of code at age 10, driven by curiosity about how computers and video games worked. My main passion is computer graphics and game development. I also enjoy exploring low-level systems such as programming languages, operating systems and emulators. Over the years, I’ve witnessed the evolution of 3D graphics and turned that fascination into both personal projects and professional work.
+        I wrote my first line of code at age 10, driven by curiosity about how computers and video games worked.
+        My main passion is computer graphics and game development.
+        I also enjoy exploring low-level systems such as programming languages, operating systems and emulators.
+        Over the years, I've witnessed the evolution of 3D graphics and turned that fascination into both personal projects and professional work.
       </p>
       <hr class="spacing" />
       <p>
-        On this page, you’ll find a selection of both — professional projects that reflect real-world collaboration and shipped products, alongside personal projects where I’ve delved into the inner workings of computers and explored various system architectures.
+        On this page, you'll find a selection of both — professional projects that reflect real-world collaboration and shipped products, alongside personal projects where I've delved into the inner workings of computers and explored various system architectures.
       </p>
       <hr class="spacing" />
       <div style="text-align: center;">
@@ -316,29 +319,19 @@
     <hr class="separator" />
 
     <!-- Category Buttons -->
-    <div class="buttons" id="category-buttons"></div>
+    <div class="buttons" id="category-buttons">
+      <button class="chip active" aria-pressed="true">All</button><button class="chip" aria-pressed="false">Professional</button><button class="chip" aria-pressed="false">Indie</button><button class="chip" aria-pressed="false">Graphics Programming</button><button class="chip" aria-pressed="false">Game Development</button><button class="chip" aria-pressed="false">Game Engine Development</button><button class="chip" aria-pressed="false">Low-Level Development</button>
+    </div>
 
     <!-- Project Entries -->
-    <div class="grid" id="projects"></div>
-  </div>
-
-  <script>
-    // --- Data ---
-    const categories = [
-      "All",
-      "Professional",
-      "Indie",
-      "Graphics Programming",
-      "Game Development",
-      "Game Engine Development",
-      "Low-Level Development"
-    ];
-
-    const projects = [
-      {
-        title: "Mount & Blade II: Bannerlord (2020 - 2022)",
-        categories: ["Professional", "Game Engine Development", "Graphics Programming"],
-        content:`
+    <div class="grid" id="projects">
+      <article class="card visible" style="transition-delay: 0ms;">
+        <div class="content">
+          <h1 class="title">Mount &amp; Blade II: Bannerlord (2020 - 2022)</h1>
+          <div class="tags">
+            <span class="tag">Professional</span><span class="tag">Game Engine Development</span><span class="tag">Graphics Programming</span>
+          </div>
+          <div class="desc">
           <div class="images">
             <img src="images/tw_1.jpg">
             <img src="images/tw_2.png">
@@ -373,12 +366,15 @@
               <a class="link" href="https://store.steampowered.com/app/261550/Mount__Blade_II_Bannerlord/">Click here</a> for the Steam store page.
             </p>
           </div>
-        `
-      },
-      {
-        title: "Hot Wheels Open World (2020)",
-        categories: ["Professional", "Game Development"],
-        content:`
+        </div>
+        </div>
+      </article><article class="card visible" style="transition-delay: 60ms;">
+        <div class="content">
+          <h1 class="title">Hot Wheels Open World (2020)</h1>
+          <div class="tags">
+            <span class="tag">Professional</span><span class="tag">Game Development</span>
+          </div>
+          <div class="desc">
           <div class="images">
             <img src="images/hw_1.jpg">
             <img src="images/hw_2.png">
@@ -411,16 +407,19 @@
               <a class="link" href="https://www.roblox.com/games/5652023420/">Click here</a> for the Roblox store page.
             </p>
           </div>
-        `
-      },
-      {
-        title: "kB (2023 - Present)",
-        categories: ["Indie", "Game Development"],
-        content:`
+        </div>
+        </div>
+      </article><article class="card visible" style="transition-delay: 120ms;">
+        <div class="content">
+          <h1 class="title">kB (2023 - Present)</h1>
+          <div class="tags">
+            <span class="tag">Indie</span><span class="tag">Game Development</span>
+          </div>
+          <div class="desc">
           <div class="images">
             <div class="sidebyside">
-              <iframe style="width: 49%;" src="https://www.youtube.com/embed/SSLnP636rwM" allowfullscreen></iframe>
-              <iframe style="width: 49%;" src="https://www.youtube.com/embed/HjgcAGgmA3U" allowfullscreen></iframe>
+              <iframe style="width: 49%;" src="https://www.youtube.com/embed/SSLnP636rwM" allowfullscreen=""></iframe>
+              <iframe style="width: 49%;" src="https://www.youtube.com/embed/HjgcAGgmA3U" allowfullscreen=""></iframe>
             </div>
             <div class="sidebyside">
               <img style="height: 300px;" src="images/tapp_1.jpg">
@@ -489,12 +488,15 @@
               </p>
             </ul>
           </div>
-        `
-      },
-      {
-        title: "Veng (2024 - Present)",
-        categories: ["Game Engine Development", "Graphics Programming", "Game Development"],
-        content:`
+        </div>
+        </div>
+      </article><article class="card visible" style="transition-delay: 180ms;">
+        <div class="content">
+          <h1 class="title">Veng (2024 - Present)</h1>
+          <div class="tags">
+            <span class="tag">Game Engine Development</span><span class="tag">Graphics Programming</span><span class="tag">Game Development</span>
+          </div>
+          <div class="desc">
           <div class="images">
             <img src="images/v_1.png">
             <img style="height: 300px;" src="images/recurse.jpg">
@@ -524,7 +526,7 @@
             <p>
               A minimalist dungeon puzzle game where players interact with "echoes" of their past selves across looping timelines.
               Made in 96 hours.
-            <ul>
+            </p><ul>
               <li> Implemented a deterministic echo replay system </li>
               <li> Built a minimal physics and collision system </li>
               <li> Added audio streaming and control with miniaudio </li>
@@ -553,12 +555,15 @@
               <a class="link" href="https://axavian.itch.io/rampage">Click here</a> for the game page.
             </p>
           </div>
-        `
-      },
-      {
-        title: "axNES (2023 - Present)",
-        categories: ["Low-Level Development", "Graphics Programming"],
-        content:`
+        </div>
+        </div>
+      </article><article class="card visible" style="transition-delay: 240ms;">
+        <div class="content">
+          <h1 class="title">axNES (2023 - Present)</h1>
+          <div class="tags">
+            <span class="tag">Low-Level Development</span><span class="tag">Graphics Programming</span>
+          </div>
+          <div class="desc">
           <div class="images">
             <img src="images/axnes.jpg">
           </div>
@@ -577,12 +582,15 @@
               This allows hardware to be potentially reused in other emulators (e.g. Apple II, Atari 8-bit, Commodore 64).
             </p>
           </div>
-        `
-      },
-      {
-        title: "kaOS (2023 - Present)",
-        categories: ["Low-Level Development"],
-        content:`
+        </div>
+        </div>
+      </article><article class="card visible" style="transition-delay: 300ms;">
+        <div class="content">
+          <h1 class="title">kaOS (2023 - Present)</h1>
+          <div class="tags">
+            <span class="tag">Low-Level Development</span>
+          </div>
+          <div class="desc">
           <div class="images">
             <img src="images/kaos.png">
           </div>
@@ -601,12 +609,15 @@
               Future plans include transitioning to protected mode and developing a 32-bit kernel.
             </p>
           </div>
-        `
-      },
-      {
-        title: "Game Jams (2015 - Present)",
-        categories: ["Game Development"],
-        content:`
+        </div>
+        </div>
+      </article><article class="card visible" style="transition-delay: 360ms;">
+        <div class="content">
+          <h1 class="title">Game Jams (2015 - Present)</h1>
+          <div class="tags">
+            <span class="tag">Game Development</span>
+          </div>
+          <div class="desc">
           <div class="images">
             <img style="width: 75%;" src="images/exodus.png">
             <img style="width: 75%;" src="images/escape.png">
@@ -631,16 +642,19 @@
               <li> <a class="link" href="https://axavian.itch.io/escape">Click here</a> for the Ludum Dare 44 entry (2019) </li>
               <li> <a class="link" href="https://axavian.itch.io/squirrels-revenge">Click here</a> for the Ludum Dare 42 entry (2018) </li>
               <li> <a class="link" href="http://globalgamejam.org/2017/games/horribly-slow-rowing-extremely-inefficient-method">Click here</a> for the Global Game Jam 2017 entry (2017) </li>
-              <li> <a class="link" href="https://web.archive.org/web/20201204024552/http://ludumdare.com/compo/ludum-dare-37/?action=preview&uid=117624">Click here</a> for the Ludum Dare 37 entry (2016) </li>
+              <li> <a class="link" href="https://web.archive.org/web/20201204024552/http://ludumdare.com/compo/ludum-dare-37/?action=preview&amp;uid=117624">Click here</a> for the Ludum Dare 37 entry (2016) </li>
               <li> <a class="link" href="http://globalgamejam.org/2015/games/bos-kagit-empty-paper">Click here</a> for the Global Game Jam 2015 entry (2015) </li>
             </ul>
           </div>
-        `
-      },
-      {
-        title: "Software Rendering",
-        categories: ["Graphics Programming"],
-        content:`
+        </div>
+        </div>
+      </article><article class="card visible" style="transition-delay: 420ms;">
+        <div class="content">
+          <h1 class="title">Software Rendering</h1>
+          <div class="tags">
+            <span class="tag">Graphics Programming</span>
+          </div>
+          <div class="desc">
           <div class="images">
             <img src="images/rayray_001.jpg">
             <img src="images/urgax_000.jpg">
@@ -675,14 +689,17 @@
               <li> Programmable vertex and fragment stages </li>
             </ul>
           </div>
-        `
-      },
-      {
-        title: "Konrul (2020)",
-        categories: ["Game Engine Development", "Graphics Programming"],
-        content:`
+        </div>
+        </div>
+      </article><article class="card visible" style="transition-delay: 480ms;">
+        <div class="content">
+          <h1 class="title">Konrul (2020)</h1>
+          <div class="tags">
+            <span class="tag">Game Engine Development</span><span class="tag">Graphics Programming</span>
+          </div>
+          <div class="desc">
           <div class="images">
-            <iframe src="https://www.youtube.com/embed/rJpFe2YftY0" allowfullscreen></iframe>
+            <iframe src="https://www.youtube.com/embed/rJpFe2YftY0" allowfullscreen=""></iframe>
           </div>
           <div class="text">
             <p>
@@ -697,16 +714,19 @@
               <li> Scene editor </li>
               <li> Game component scripting </li>
               <li> Shader hot reloading </li>
-              <li> Environment mapping & Skylight </li>
+              <li> Environment mapping &amp; Skylight </li>
               <li> Particle system </li>
             </ul>
           </div>
-        `
-      },
-      {
-        title: "Koala (2018)",
-        categories: ["Low-Level Development"],
-        content:`
+        </div>
+        </div>
+      </article><article class="card visible" style="transition-delay: 540ms;">
+        <div class="content">
+          <h1 class="title">Koala (2018)</h1>
+          <div class="tags">
+            <span class="tag">Low-Level Development</span>
+          </div>
+          <div class="desc">
           <div class="images">
             <img src="images/koala_002.jpg">
           </div>
@@ -720,12 +740,15 @@
               <a class="link" href="https://github.com/AXaViaN/Koala">Click here</a> for the GitHub page.
             </p>
           </div>
-        `
-      },
-      {
-        title: "PBR-DE (2017)",
-        categories: ["Graphics Programming"],
-        content:`
+        </div>
+        </div>
+      </article><article class="card visible" style="transition-delay: 600ms;">
+        <div class="content">
+          <h1 class="title">PBR-DE (2017)</h1>
+          <div class="tags">
+            <span class="tag">Graphics Programming</span>
+          </div>
+          <div class="desc">
           <div class="images">
             <img src="images/pbr_demo_6.jpg">
           </div>
@@ -739,12 +762,15 @@
               <a class="link" href="https://github.com/AXaViaN/PBR_demo">Click here</a> for the GitHub page.
             </p>
           </div>
-        `
-      },
-      {
-        title: "Kaşif Veysel – Yemen Ellerinde (2015)",
-        categories: ["Graphics Programming", "Game Engine Development", "Game Development"],
-        content:`
+        </div>
+        </div>
+      </article><article class="card visible" style="transition-delay: 660ms;">
+        <div class="content">
+          <h1 class="title">Kaşif Veysel – Yemen Ellerinde (2015)</h1>
+          <div class="tags">
+            <span class="tag">Graphics Programming</span><span class="tag">Game Engine Development</span><span class="tag">Game Development</span>
+          </div>
+          <div class="desc">
           <div class="images">
             <img src="images/veysel.jpg">
           </div>
@@ -762,86 +788,13 @@
               <a class="link" href="https://yadi.sk/d/NsuloiIOfGb3A">Click here</a> for the game (performance may be low on modern systems).
             </p>
           </div>
-        `
-      },
-    ];
-
-    // --- DOM refs ---
-    const buttonContainer = document.getElementById("category-buttons");
-    const projectContainer = document.getElementById("projects");
-    let activeCategory = "All";
-
-    // --- Render buttons ---
-    function renderButtons(){
-      buttonContainer.innerHTML = "";
-      categories.forEach(cat => {
-        const btn = document.createElement("button");
-        btn.className = "chip" + (activeCategory === cat ? " active" : "");
-        btn.textContent = cat;
-        btn.setAttribute('aria-pressed', activeCategory === cat);
-        btn.onclick = () => {
-          if (activeCategory === cat) return; // avoid redundant work
-          activeCategory = cat;
-          renderButtons();
-          renderProjects(true);
-        };
-        buttonContainer.appendChild(btn);
-      });
-    }
-
-    // --- Utility: create a card element ---
-    function createCard(p){
-      const card = document.createElement('article');
-      card.className = 'card';
-      card.innerHTML = `
-        <div class="content">
-          <h1 class="title">${p.title}</h1>
-          <div class="tags">
-            ${p.categories.map(c=>`<span class='tag'>${c}</span>`).join('')}
-          </div>
-          <div class="desc">${p.content}</div>
         </div>
-      `;
-      return card;
-    }
+        </div>
+      </article>
+    </div>
+  </div>
 
-    // --- Render projects with enter/exit animations ---
-    function renderProjects(withExit){
-      const list = (activeCategory === 'All') ? projects : projects.filter(p=>p.categories.includes(activeCategory));
-
-      if(withExit){
-        // animate existing out
-        const current = Array.from(projectContainer.children);
-        current.forEach((el,i)=>{
-          el.style.transitionDelay = (i*40)+'ms';
-          el.classList.add('card-out');
-        });
-        // after exit, replace content
-        const exitDur = 320 + current.length*40;
-        setTimeout(()=> build(list), Math.min(exitDur, 800));
-      } else {
-        build(list);
-      }
-    }
-
-    function build(list){
-      projectContainer.innerHTML = '';
-      list.forEach((p,i)=>{
-        const card = createCard(p);
-        card.style.transitionDelay = (i*60)+'ms';
-        projectContainer.appendChild(card);
-        
-        const reflow = card.offsetHeight;
-        card.classList.add('visible');
-        
-        // force reflow then add visible for animation
-        requestAnimationFrame(()=> card.classList.add('visible'));
-      });
-    }
-
-    // Init
-    renderButtons();
-    renderProjects(false);
-  </script>
+  <!-- Enhancement script (adds animation/filter behavior) -->
+  <script src="scripts/index.js"></script>
 </body>
 </html>
